@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_8_Aks</title>
+</head>
+<body>
+  <label for="login">LOGIN:</label>
+  <input id="loginn" type="text" placeholder="Type your login">
+
+  <label for="password">PASSWORD:</label>
+  <input id="password" type="password" placeholder="***********">
+
+  <button id='button' onclick="tester()" type="button">Sign In</button>
+  <script>
+    let users = [
+        {login: 'Akseleu', password: '123456'},
+        {login: 'Berik', password: '0424'}
+      ]
+    function tester(){
+      let login = document.querySelector("#loginn").value;
+      let password= document.querySelector("#password").value
+
+      for(i=0; i<users.length; i++){
+        if(users[i].login==login && users[i].password==password){
+          document.body.innerHTML = ''
+          document.querySelector('body').innerHTML = "<h1>You are authenticated</h1>"
+          break
+        }
+        if (users[i].login !== login){
+            document.querySelector('#loginn').style.borderColor = 'red'
+        }
+        if (users[i].password !== password){
+            document.querySelector('#password').style.borderColor = 'red'
+        }
+      }
+    }
+  </script>
+</body>
+</html>

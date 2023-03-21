@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS_6_Aks</title>
+</head>
+<body>
+  <style>
+    .error {
+      display: none;
+      color: red;
+    }
+
+    button {
+      color: white;
+      background-color: black;
+    }
+  </style>
+
+    <div>
+      <label for="email">EMAIL:</label>
+      <input type="email" id="email" placeholder="example@gmail.com">
+      <span class="error" id="emailError">Current email is already exists</span>
+    </div>
+
+    <div>
+      <label for="password">PASSWORD:</label>
+      <input type="password" id="password" placeholder="*******">
+      <span class="error" id="passError">Password length at least must be 6 symbols</span>
+    </div>
+    
+    <div>
+      <label for="rePassword">REPASSWORD:</label>
+      <input type="password" id="rePassword" placeholder="*******">
+      <span class="error" id="repassError">Passwords are not same</span>
+    </div>
+    
+    <button type="button" onclick="init()">REGISTER</button>
+
+  <script>
+    let users = [
+      {email: 'ilyas@gmail.com', password: '123'},
+      {email: 'aybek@gmail.com', password: '321'}
+    ]
+
+    function init() {
+      validateEmail()
+      validatePassword()
+    }
+
+    function validateEmail() {
+      let email = document.querySelector('#email').value
+      for (i = 0; i < users.length; i++) {
+        if (email === users[i].email) {
+          document.querySelector('#emailError').style.display = 'block'
+          break
+        } else {
+          document.querySelector('#emailError').style.display = 'none'
+        }
+      }
+    }
+
+    function validatePassword() {
+      let password = document.querySelector('#password').value
+      let rePassword = document.querySelector('#rePassword').value
+
+      if (password.length < 6) {
+        document.querySelector('#passError').style.display = 'block'
+      } else {
+        document.querySelector('#passError').style.display = 'none'
+      }
+
+      if (password !== rePassword) {
+        document.querySelector('#repassError').style.display = 'block'
+      } else {
+        document.querySelector('#repassError').style.display = 'none'
+      }
+    }
+
+
+  </script>
+</body>
+</html>

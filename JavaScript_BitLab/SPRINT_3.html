@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPRINT_3_AKS</title>
+</head>
+<body>
+    <div style="display: flex; justify-content: space-between; width: 70%; border: 1px solid lightgray; padding: 20px;">
+    <div>
+        <label>Enter the value:</label> <br><br> 
+        <input type="number" id="main_input"  >
+        <select id="valuta">
+            <option value="KZT" selected>KZT</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+    </div>
+    <div>
+        <label>KZT</label> <br><br>
+        <input type="number" id="out_KZT">
+    </div>
+    
+    <div>
+        <label>USD</label> <br><br>
+        <input type="number" id="out_USD">
+    </div>
+    
+    <div>
+        <label>EUR</label> <br><br>
+        <input type="number" id="out_EUR">
+    </div>
+    <input type="button" onclick="convert()" value="Refresh">
+    </div>
+    <script>
+        function convert(){
+        let number=document.querySelector("#main_input").value 
+        let valuta=document.getElementById("valuta").value
+
+        let kz=""
+        let usa=""
+        let eur=""
+        if(valuta==="KZT"){
+            kz=0
+            usa=(number/431).toFixed(2)
+            eur=(number/509).toFixed(2)
+        }else if(valuta==="USD"){
+            usa=0
+            kz=(number*429).toFixed(2)
+            eur=(kz/509).toFixed(2)
+        }else if(valuta==="EUR"){
+            eur=0
+            kz=(number*507).toFixed(2)
+            usa=(kz/431).toFixed(2)
+        }
+        document.getElementById("out_KZT").value=kz
+        document.getElementById("out_USD").value=usa
+        document.getElementById("out_EUR").value=eur
+    }
+    </script>
+    
+</body>
+</html>

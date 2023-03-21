@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_6_Aks</title>
+</head>
+<body>
+    <script>
+        /*  task 6-1
+        let n = parseInt(prompt("Введите резмер массива: "))
+        let arr = []
+        let arr1 = []
+        for(i = 0; i < n; i++){
+            arr.push(parseInt(prompt("Введите элементы массива: ")))
+        }
+        for(i = arr.length-1; i >= 0; i--){
+            arr1.push(arr[i])
+        }
+        alert(arr1)*/
+
+        /*  task 6-2
+        let n = parseInt(prompt("Введите резмер массива: "))
+        let arr = []
+        for(i = 0; i <n; i++){
+            arr.push(parseInt(prompt("Введите элементы массива: ")))
+        }
+        let max = arr[0]
+        for(i = 0; i<arr.length; i++){
+            if(arr[i]>max){
+                max=arr[i]
+            }
+        }
+        alert(max)*/
+
+        /*  task 6-3
+        let n = parseInt(prompt("Введите резмер массива: "))
+        let arr = []
+        for(i = 0; i <n; i++){
+            arr.push(parseInt(prompt("Введите элементы массива: ")))
+        }
+        let sum=0
+        let avr=0
+        for(i=0; i<arr.length; i++){
+            sum+=arr[i]
+        }
+        avr=sum/arr.length
+        alert(`${sum},${avr}`)*/
+
+        /*  task 6-4
+        let n = parseInt(prompt("Введите резмер массива: "))
+        let arr = []
+        let arr1=[]
+        for(i = 0; i <n; i++){
+            arr.push(parseInt(prompt("Введите элементы массива: ")))
+        }
+        for(i=0; i<arr.length; i++){
+            arr1.push(arr[i]*arr[i])
+        }
+        alert(arr1)*/
+
+        /*  task 6-5*/
+        /*users = [
+            {"login:"ilyas", "password": "qwerty"},
+            {"login":"eldar", "password": "qqqqq"},
+            {"login":"assylkhan", "password": "qweqwe"},
+            {"login":"anel", "password": "asdasd"},
+            {"login":"alibek", "password": "aaaaaa"}
+        ];
+        let login_input =prompt("Please enter your login: ")
+        let password_input =prompt("Please enter your password: ")
+
+        for(let i=0;i<users.length;i++){
+            if(users[i]["login"]===login_input && password_input===users[i]["password"]){
+                alert("Welcome, you are authenticated")
+                break
+            }else{
+                alert("User not found")
+                break
+            }
+        } */
+        /*  task 6-6
+        let books = [
+        {
+            author: 'Joanne Rowling',
+            title: ["Harry Potter and the Philosopher's Stone", "Harry Potter and the Chamber of Secrets","Harry Potter and the Prisoner of Azkaban"],
+            isbn: [1233123,222332,452323],
+            price: [50, 40, 55]
+        },
+        {   
+            author: 'George R. R. Martin',
+            title: ['Game of Thrones I','Game of Thrones II','Game of Thrones III'],
+            isbn: [123123, 74735, 23],
+            price: [100, 120, 55]
+        }
+        ]
+
+    let author = prompt("ВВедите имя автора:")
+    let index = 0
+    for (i = 0; i < books.length; i++) {
+      if (author === books[i].author) {
+        index = i
+        break
+      }
+    }
+    let str=""
+    for (i = 0; i < books[index].title.length; i++) {
+      str+=`${books[index].title[i]} - ${books[index].author} - ${books[index].isbn[i]} - ${books[index].price[i]}$\n`
+    }
+    alert(str)*/
+    </script>
+</body>
+</html>

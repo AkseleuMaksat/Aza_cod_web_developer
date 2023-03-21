@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Aks</title>
+</head>
+<body>
+    <script>
+        /*  task 5-1:
+        let x = parseInt(prompt("akseleu"))
+        let y= Math.pow(x, 2)+2*x-1
+        alert('y='+y)*/
+        /*  task 5-2
+        let x= prompt("Enter your first number: ")
+        let y= prompt("Enter your second number: ")
+        if(x%y==0){
+            alert("Divisible")
+        }else{
+            alert("not Divisible")
+        }*/
+        
+        /*  task 5-3
+        let name= prompt("Enter your name: ")
+        let surname= prompt("Enter your surname:")
+        let city= prompt("Enter your city:")
+        let age= prompt("Enter your age")
+        let str=
+            "Name: "+ name +
+            "\nSurname: "+ surname+
+            "\nCity: "+ city+
+            "\nAge: "+30
+        alert(str)*/
+        
+        /*  task 5-4
+        let a= parseInt(prompt("a equal to:"))
+        let b= parseInt(prompt("b equal to:"))
+        let c= parseInt(prompt("c equal to:"))
+        let str=
+            "a+b+c="+(a+b+c)+
+            "\na-b-c="+(a-b-c)+
+            "\na*b*c="+(a*b*c)
+        alert(str)*/
+        
+        /*  task 5-5
+        let a= parseInt(prompt("По сколько штук хотите делить?"))
+        let b= parseInt(prompt("Сколько яблоки у вас есть?"))
+        let str = b%a
+        b=b-str
+        alert(b/a)*/
+        
+        /*  task 5-6 
+        let a=parseInt(prompt("Enter the first number"))
+        let b= parseInt(prompt("Ehter your second number"))
+        let result= Math.pow(a, 2)+Math.pow(b,2)
+        alert(Math.sqrt(result))*/
+        
+        /*  task 5-7
+        let speed= parseInt(prompt("Ehter your speed:"))
+        let distance = parseInt(prompt("Enter distance:"))
+        
+        let hours=parseInt(distance/speed)+15
+        let minut=parseInt(distance/speed)+45
+        if(minut>60){
+            hours+=parseInt(minut/60)
+            minut=minut%60
+        }
+        if(hours==18 && minut==0 || hours<18){
+            alert("YES, YOU CAN REACH")
+        } else{
+            alert("NO, YOU CAN NOT REACH")
+        }*/
+
+        /*  task 5-8
+        let a= parseInt(prompt("Enter the quantity"))
+        if(a*120>4000){
+            alert(a*120-a*12)
+        }else{
+            alert(a*120)
+        }*/
+
+        /*  task 5-9
+        let money_tg=parseInt(prompt("INSERT YOUR AMOUNT IN KZT:"))
+        let index =parseInt(prompt("1- CONVERT TO USD\n2- CONVERT TO EUR\n3- CONVERT TO GBP"))
+        switch(index){
+            case 1:
+                alert(money_tg+" KZT = "+(money_tg/380).toFixed(2)+" USD")
+                break
+            case 2:
+                alert(money_tg+" KZT = "+(money_tg/430).toFixed(2)+" EUR")
+                break
+            case 3:
+                alert(money_tg+" KZT = "+(money_tg/480).toFixed(2)+" GBP")
+                break
+        }*/
+
+        /*  task 5-10 
+        let username=prompt("Please enter the username:")
+        let password=prompt("Enter your password:")
+        if(username=="user" && password=="qwerty"){
+            alert("Authentication completed")
+        }else{
+            alert("Invalid login or password")
+        }
+                //VARIANT 2
+        let correctUser = {
+        "login": 'user',
+        'pass': 'qwerty'
+        }
+        let login = prompt("Insert login:")
+        let pass = prompt("Insert password:")
+        if (login !== correctUser.login && pass !== correctUser.pass)
+             alert("Invalid login or password")
+         else{
+            alert("Authentication completed")
+        }*/
+        /*  task 5-11
+        let year= parseInt(prompt("enter the year: "))
+        if((year%4==0 && year%100!=0)|| year%400==0){
+            alert("Yes")
+        }else{
+            alert("No")
+        }*/
+
+        /*  task 5-12
+        let score=parseInt(prompt("Enter your score:"))
+        if(score>=90){
+            alert("A")
+        }else if(score>=75){
+            alert("B")
+        }else if(score>=60){
+            alert("C")
+        }else if(score>=50){
+            alert("D")
+        }else{
+            alert("F")
+        }*/
+
+        /*  task 5-13
+        let choice=parseInt(prompt("1 - Science \n2 - Humanitarian subjects \n3 - Art \n4 - Sport:"))
+        switch(choice){
+            case 1: 
+                let one=parseInt(prompt("1 - Math \n2 - Physics:"))
+                if(one==1){
+                    alert("You are Financier")
+                }else{
+                    alert("You are Engineer")
+                }
+                break
+            case 2:
+                let two=parseInt(prompt("1 - History \n2 - Foreign Languages:"))
+                if(two==1){
+                    alert("You are Historic or Diplomat")
+                }else{
+                    alert("You are Translator")
+                }
+            case 3:
+                let three=parseInt(prompt("1 - Drawing \n2 -Singing:"))
+                if(three==1){
+                    alert("You are Painter or Architect")
+                }else{
+                    alert("You are Singer or Tamada")
+                }
+            case 4:
+                let four=parseInt(prompt("1 - Team \n2 - Individual:"))
+                if(four==1){
+                    alert("You are footballer or Basketball player")
+                }else{
+                    alert("You are boxer or tennis player")
+                }
+        }*/
+
+        /*  task 5-14
+        let a=parseInt(prompt("Enter the first side of the triangle"))
+        let b=parseInt(prompt("Enter the second side of the triangle"))
+        let c=parseInt(prompt("Enter the third side of the triangle"))
+        if(a+b>c && a+c>b && b+c>a){
+            alert("YES")
+        }else{
+            alert("NO")
+        }*/
+
+        /*  task 5-15
+        let money_tg=parseInt(prompt("INSERT YOUR AMOUNT IN KZT:"))
+        let dollars=parseInt(money_tg/380)
+        let cents= parseInt(money_tg%380)
+        if(money_tg%380==0){
+            alert("ONLY "+dollars+" USD")
+        }else{
+            alert(dollars+" USD and "+cents+"cents")
+            //alert(Math.floor(money_tg/380)+" USD and "+(Math.floor(((money_tg/380).toFixed(2)-Math.floor(money_tg/380))*100))+"cents")
+        }*/
+        
+        /*  task 5-16
+        let minut=parseInt(prompt("Enter the minut:"))
+        let hours=parseInt(minut/60)
+        if(minut%60==0){
+            alert("ONLY " +hours+" HOURS")
+        }else{
+            alert(hours+" hours and "+ (minut%60)+" minutes")
+        }*/
+</script>
+</body>
+</html>

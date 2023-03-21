@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_7_Aks</title>
+</head>
+<body>
+    <script>
+        /*  task 7-1
+        let a = parseInt(prompt("Введите размер вашего массива:"))
+        let arr=[]
+        for(i=0; i<a; i++){
+            arr.push(parseInt(prompt("Введите элетенты массива:")))
+        }
+        let m= parseInt(prompt("Введите цифру которую хотите найти:"))
+        if(arr.indexOf(m)){
+            alert(`"Yes", ${arr.indexOf(m)}`)
+            
+        }else{
+            alert("No")
+        }*/
+
+        /*  task 7-2
+        let prod = 1
+        let k = 0
+        for (n = parseInt(prompt('Введите число')); n !== 0 ; n = parseInt(prompt('Введите число'))) {
+            prod *= n
+            k++
+        }
+        alert(Math.pow(prod, (1 / k)).toFixed(3))*/
+        
+        
+        /*  task 7-3
+        let str = ''
+        for (n = parseInt(prompt("Введите число")); n !== 0 ; n = parseInt(prompt("Введите число"))) {
+        if (n >= 0) {
+            str += n + ' '
+        }
+        }
+        alert(str.trim())*/
+
+        /*  task 7-4
+        let a = parseInt(prompt("Введите размер вашего массива:"))
+        let arr=[]
+        let prod=1
+        for(i=0; i<a; i++){
+            arr.push(parseInt(prompt("Введите элетенты массива:")))
+            if(arr[i]>0){
+                prod*=arr[i]
+            }
+        }
+        alert(prod)*/
+
+        /*  task 7-5*/
+        let cars = [ 
+            {
+                mark: 'Mercedes',
+                year: [2012, 2015, 2018],
+                liters: [2.0, 2.4, 3.0],
+                price: [8000000, 12000000, 20000000]
+            },
+            {
+                mark: 'Toyota',
+                year: [2011, 2013],
+                liters: [2.4, 3.3],
+                price: [12000000, 22000000]
+            },
+            {
+                mark: 'Lexus',
+                year: [2015, 2017],
+                liters: [3.0, 4.3],
+                price: [22000000, 32000000]
+            }
+        ]
+        function main() {
+            let n = parseInt(prompt(`
+                INSERT [1] TO SEARCH BY NAME
+                INSERT [2] TO SEARCH BY YEAR
+                INSERT [3] TO SEARCH BY ENGINE VOLUME
+                INSERT [4] TO SEARCH BY PRICE
+                INSERT [5] TO EXIT`
+            ))
+            switch (n) {
+                case 1:
+                findByName(prompt('Введите марку машины'))
+                break
+                case 2:
+                let yearStart = parseInt(prompt('Введите начало годы машины'))
+                let yearEnd = parseInt(prompt('Ведите конец года машины'))
+                findByYear(yearStart, yearEnd)
+                break
+                case 3:
+                let litersStart = parseFloat(prompt('Введите начало объема двигательа'))
+                let litersEnd = parseFloat(prompt('Введите конец объема двигательа'))
+                findByLiters(litersStart, litersEnd)
+                break
+                case 4:
+                let priceStart = parseInt(prompt('Введите начальную сумму'))
+                let priceEnd = parseInt(prompt('Введите конечную сумму '))
+                findByPrice(priceStart, priceEnd)
+                break
+                case 5:
+                return;
+            }
+        }
+        function findByName(mark) {
+        for (i = 0; i < cars.length; i++) {
+            if (mark === cars[i].mark) {
+            for (j = 0; j < cars[i].year.length; j++)
+                alert(`${cars[i].mark} - ${cars[i].year[j]} - ${cars[i].liters[j]} - ${cars[i].price[j]} KZT`)
+            }
+        }
+        }
+
+        function findByYear(yearStart, yearEnd){
+            let str=""
+            for(i=0; i<cars.length;i++){
+                for(j=0; j<cars.length; j++){
+                    if(yearStart<=cars[i].year[j] && yearEnd>=cars[i].year[j]){
+                        str+=`${cars[i].mark} - ${cars[i].year[j]} - ${cars[i].liters[j]} - ${cars[i].price[j]} KZT\n`
+                    }
+                }
+            }
+            alert(str)
+        }
+        function findByLiters(litersStart, litersEnd){
+            let str=""
+            for(i=0; i<cars.length;i++){
+                for(j=0; j<cars.length; j++){
+                    if(litersStart<=cars[i].liters[j] && litersEnd>=cars[i].liters[j]){
+                        str+=`${cars[i].mark} - ${cars[i].year[j]} - ${cars[i].liters[j]} - ${cars[i].price[j]} KZT\n`
+                    }
+                }
+            }
+            alert(str)
+        }
+        function findByLiters(litersStart, litersEnd){
+            let str=""
+            for(i=0; i<cars.length;i++){
+                for(j=0; j<cars.length; j++){
+                    if(litersStart<=cars[i].liters[j] && litersEnd>=cars[i].liters[j]){
+                        str+=`${cars[i].mark} - ${cars[i].year[j]} - ${cars[i].liters[j]} - ${cars[i].price[j]} KZT\n`
+                    }
+                }
+            }
+            alert(str)
+        }
+        function findByPrice(priceStart, priceEnd){
+            let str=""
+            for(i=0; i<cars.length;i++){
+                for(j=0; j<cars.length; j++){
+                    if(priceStart<=cars[i].price[j] && priceEnd>=cars[i].price[j]){
+                        str+=`${cars[i].mark} - ${cars[i].year[j]} - ${cars[i].liters[j]} - ${cars[i].price[j]} KZT\n`
+                    }
+                }
+            }
+            alert(str)
+        }
+        main()
+        
+
+        /*  task 7-6 
+        let students = [];
+        function addStudent() {
+        let name = prompt("INSERT NAME:");
+        let surname = prompt("INSERT SURNAME:");
+        let gpa = prompt("INSERT GPA:");
+
+        let student = {
+            name: name,
+            surname: surname,
+            gpa: gpa
+        };
+
+        students.push(student);
+        }
+
+        function listStudents() {
+        for (i = 0; i < students.length; i++) {
+            alert(i + 1 + ". " + students[i].name + " " + students[i].surname + " (GPA: " + students[i].gpa + ")");
+        }
+        }
+
+        function main() {
+        while (true) {
+            let choice = parseInt(prompt("PRESS 1 TO ADD STUDENT\nPRESS 2 TO LIST STUDENTS\nPRESS 0 TO EXIT"));
+
+            switch (choice) {
+            case 1:
+                addStudent();
+                break;
+            case 2:
+                listStudents();
+                break;
+            case 0:
+                return;
+            default:
+                alert("Invalid choice!");
+            }
+        }
+        }
+        main()*/
+    </script>
+</body>
+</html>

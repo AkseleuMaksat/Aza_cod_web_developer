@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_4</title>
+</head>
+<body>
+    <img src="https://avatars.mds.yandex.net/i?id=f6daabe1900cc9828c086f10c8e635e8c261e134-5232111-images-thumbs&n=13" width="320px" id = "pic" height="320px">
+        <br>
+    <img src="https://avatars.mds.yandex.net/i?id=cd12eafdd82e8a4f149008298aa3c258-4376415-images-thumbs&n=13" width="50px" onmouseover = "setPic(this)">
+    <img src="https://avatars.mds.yandex.net/i?id=44b8501c935334e4028f27c2a14f215ea859e5a3-3909374-images-thumbs&n=13" width="50px" onmouseover = "setPic(this)">
+    <img src="https://avatars.mds.yandex.net/i?id=5341c9a87855caf9b5a379f4f75b7b95-5447344-images-thumbs&n=13" width="50px" onmouseover = "setPic(this)">
+    <img src="https://avatars.mds.yandex.net/i?id=f6daabe1900cc9828c086f10c8e635e8c261e134-5232111-images-thumbs&n=13" width="50px" onmouseover = "setPic(this)">
+    <img src="https://avatars.mds.yandex.net/i?id=de0e8a0166f10f304dbf3d1bc6dcfcea-5550711-images-thumbs&n=13" width="50px" onmouseover = "setPic(this)">
+    <img src="https://avatars.mds.yandex.net/i?id=1bc4bf43bf19b7065713481777c3c514-5737861-images-thumbs&n=13" width="50px" onmouseover = "setPic(this)">
+    <script>
+        let pics = ["https://avatars.mds.yandex.net/i?id=f6daabe1900cc9828c086f10c8e635e8c261e134-5232111-images-thumbs&n=13", "https://avatars.mds.yandex.net/i?id=44b8501c935334e4028f27c2a14f215ea859e5a3-3909374-images-thumbs&n=13", "https://avatars.mds.yandex.net/i?id=5341c9a87855caf9b5a379f4f75b7b95-5447344-images-thumbs&n=13", "https://avatars.mds.yandex.net/i?id=de0e8a0166f10f304dbf3d1bc6dcfcea-5550711-images-thumbs&n=13", "https://avatars.mds.yandex.net/i?id=7b0c4bbfaed54b8aad1a7ab523b758fc-5430182-images-thumbs&n=13"];
+        let index = 0;
+        function nextPic() {
+            let pctr = document.getElementById('pic');
+            if(index<pics.length-1){
+                index++;
+            }else{
+                index = 0;
+            }
+            pctr.src = pics[index];
+        }
+        function setPic(img) {
+          document.getElementById('pic').src = img.src;
+        }   
+    </script>
+</body>
+</html>
